@@ -13,11 +13,11 @@ Team::~Team()
 
 }
 
-bool Team::DraftPlayer(Player addPlayer, int role)
+bool Team::DraftPlayer(Player addPlayer, int roster)
 {
-	if (role <= 5 && _players[role].GetPlayer() == "Error")
+	if (roster <= 5 && _players[roster].GetPlayer() == "Error")
 	{
-		_players[role] = addPlayer;
+		_players[roster] = addPlayer;
 
 		return true;
 	}
@@ -25,9 +25,20 @@ bool Team::DraftPlayer(Player addPlayer, int role)
 	return false;
 }
 
-string Team::GetTeamInfo()
+bool Team::PlayerRole(Role addRole, int lane)
 {
-	string info = "Team player for " + _team + "\n";
+	if (lane <= 5 && _players[lane].GetPlayer() == "Error")
+	{
+		_role[lane] = addRole;
+
+		return true;
+	}
+	return false;
+}
+
+string Team::GetInfo()
+{
+	string info = "Team players for " + _team + "\n";
 
 	info += _teamName + "\n";
 	info += "________________";
@@ -43,3 +54,17 @@ string Team::GetTeamInfo()
 
 	return info;
 }
+
+/*string Team::GetRoles()
+{
+	string roleLane = "Roles: ";
+
+	for (auto role : _role)
+	{
+		if (role.GetRole() != "Error")
+		{
+			roleLane += role.GetRole() + "\n";
+		}
+	}
+	return roleLane;
+} */

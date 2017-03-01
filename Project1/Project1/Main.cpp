@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Game.h"
+#include "Role.h"
 #include "Team.h"
 #include <iostream>
 #include <string>
@@ -9,22 +10,53 @@ using namespace std;
 int main()
 
 {
+
 	Game LoL = Game("Leage of Legends");
 
 	Team tsm = Team("TSM:", "Team Solo Mid ", LoL);
 
-	Player Dyrus = Player("Dyrus");
+	Player PropagandaWar = Player("PropagandaWar");
 
-	Player Bjergson = Player("Bjergson");
+	Player Fuaximo = Player("Fuaximo");
 
-	tsm.DraftPlayer(Dyrus, 0);
+	Player Scarred = Player("Scarred");
 
-	tsm.DraftPlayer(Bjergson, 1);
+	Player BreathofDestiny = Player("BreathofDestiny");
 
-	cout << tsm.GetTeamInfo() << endl;
+	Player DustinTM = Player("DustinTM");
+
+	Role Top = Role("Top");
+	Role Jungle = Role("Jungle");
+	Role Mid = Role("Mid");
+	Role ADC = Role("ADC");
+	Role Support = Role("Support");
+
+	tsm.DraftPlayer(PropagandaWar, 0);
+	tsm.DraftPlayer(Fuaximo, 1);
+	tsm.DraftPlayer(Scarred, 2);
+	tsm.DraftPlayer(BreathofDestiny, 3);
+	tsm.DraftPlayer(DustinTM, 4);
+
+	tsm.PlayerRole(Top, 0);
+	tsm.PlayerRole(Jungle, 1);
+	tsm.PlayerRole(Mid, 2);
+	tsm.PlayerRole(ADC, 3);
+	tsm.PlayerRole(Support, 4);
+
+	cout << tsm.GetInfo() << endl;
+
+	cout << PropagandaWar.GetPlayer() << ": " << endl;
+	cout << endl;
+	cout << Fuaximo.GetPlayer() << ": " << endl;
+	cout << endl;
+	cout << Scarred.GetPlayer() << ": " << endl;
+	cout << endl;
+	cout << BreathofDestiny.GetPlayer() << ": " << endl;
+	cout << endl;
+	cout << DustinTM.GetPlayer() << ": " << endl;
+	cout << endl;
 
 	getchar();
-
 	return 0;
 
 }

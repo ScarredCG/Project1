@@ -4,7 +4,7 @@ using namespace std;
 
 Player::Player()
 {
-	_player = "This is the player";
+	_player = "";
 }
 
 Player::Player(string player)

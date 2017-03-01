@@ -2,7 +2,7 @@
 #include <string>
 
 #include "Player.h"
-
+#include "Role.h"
 #include "Game.h"
 
 using namespace std;
@@ -17,6 +17,8 @@ private:
 
 	Player _players[5];
 
+	Role _role[5];
+
 	Game _game;
 
 public:
@@ -24,8 +26,10 @@ public:
 
 	~Team();
 
-	bool DraftPlayer(Player addPlayer, int role);
+	bool DraftPlayer(Player addPlayer, int roster);
+	bool PlayerRole(Role addRole, int lane);
 
-	string GetTeamInfo();
+	string GetInfo();
+	//string GetRoles();
 };
 
