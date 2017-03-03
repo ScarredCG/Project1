@@ -27,44 +27,38 @@ bool Team::DraftPlayer(Player addPlayer, int roster)
 
 bool Team::PlayerRole(Role addRole, int lane)
 {
-	if (lane <= 5 && _players[lane].GetPlayer() == "Error")
+	if (lane <= 5 && _role[lane].GetRole() == "Error")
 	{
 		_role[lane] = addRole;
 
 		return true;
 	}
+
 	return false;
 }
 
 string Team::GetInfo()
 {
-	string info = "Team players for " + _team + "\n";
+	string info = "Team players for " + _teamName + "\n"; //or _team
 
-	info += _teamName + "\n";
-	info += "________________";
+	//info += _teamName + "\n";
+	info += "____________________________________";
 	info += "\n";
 
 		for (auto player : _players)
 		{
 			if (player.GetPlayer() != "Error")
 			{
-				info += player.GetPlayer() + "\n";
+				info += player.GetPlayer() + "";
+			}
+		}
+		for (auto role : _role)
+		{
+			if (role.GetRole() != "Error")
+			{
+				info += role.GetRole() + "";
 			}
 		}
 
 	return info;
 }
-
-/*string Team::GetRoles()
-{
-	string roleLane = "Roles: ";
-
-	for (auto role : _role)
-	{
-		if (role.GetRole() != "Error")
-		{
-			roleLane += role.GetRole() + "\n";
-		}
-	}
-	return roleLane;
-} */

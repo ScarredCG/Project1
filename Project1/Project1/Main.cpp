@@ -11,18 +11,13 @@ int main()
 
 {
 
-	Game LoL = Game("Leage of Legends");
-
-	Team tsm = Team("TSM:", "Team Solo Mid ", LoL);
+	Game LoL = Game("L E A G U E  o f  L E G E N D S");
+	Team PHS = Team("PHS:", "Patriot High School ", LoL);
 
 	Player PropagandaWar = Player("PropagandaWar");
-
 	Player Fuaximo = Player("Fuaximo");
-
 	Player Scarred = Player("Scarred");
-
 	Player BreathofDestiny = Player("BreathofDestiny");
-
 	Player DustinTM = Player("DustinTM");
 
 	Role Top = Role("Top");
@@ -31,30 +26,32 @@ int main()
 	Role ADC = Role("ADC");
 	Role Support = Role("Support");
 
-	tsm.DraftPlayer(PropagandaWar, 0);
-	tsm.DraftPlayer(Fuaximo, 1);
-	tsm.DraftPlayer(Scarred, 2);
-	tsm.DraftPlayer(BreathofDestiny, 3);
-	tsm.DraftPlayer(DustinTM, 4);
+	PHS.DraftPlayer(PropagandaWar, 0);
+	PHS.DraftPlayer(Fuaximo, 1);
+	PHS.DraftPlayer(Scarred, 2);
+	PHS.DraftPlayer(BreathofDestiny, 3);
+	PHS.DraftPlayer(DustinTM, 4);
 
-	tsm.PlayerRole(Top, 0);
-	tsm.PlayerRole(Jungle, 1);
-	tsm.PlayerRole(Mid, 2);
-	tsm.PlayerRole(ADC, 3);
-	tsm.PlayerRole(Support, 4);
+	PHS.PlayerRole(Top, 0);
+	PHS.PlayerRole(Jungle, 1);
+	PHS.PlayerRole(Mid, 2);
+	PHS.PlayerRole(ADC, 3);
+	PHS.PlayerRole(Support, 4);
+	cout << LoL.GetGame() << endl;
+	cout << endl;
 
-	cout << tsm.GetInfo() << endl;
+	cout << PHS.GetInfo() << endl;
 
 	cout << PropagandaWar.GetPlayer() << ": " << endl;
-	cout << endl;
+	//cout << endl;
 	cout << Fuaximo.GetPlayer() << ": " << endl;
-	cout << endl;
+	//cout << endl;
 	cout << Scarred.GetPlayer() << ": " << endl;
-	cout << endl;
+	//cout << endl;
 	cout << BreathofDestiny.GetPlayer() << ": " << endl;
-	cout << endl;
+	//cout << endl;
 	cout << DustinTM.GetPlayer() << ": " << endl;
-	cout << endl;
+	//cout << endl;
 
 	getchar();
 	return 0;

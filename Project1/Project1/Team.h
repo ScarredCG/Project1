@@ -30,6 +30,5 @@ public:
 	bool PlayerRole(Role addRole, int lane);
 
 	string GetInfo();
-	//string GetRoles();
 };
 

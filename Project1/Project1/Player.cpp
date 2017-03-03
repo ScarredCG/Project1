@@ -4,7 +4,7 @@ using namespace std;
 
 Player::Player()
 {
-	_player = "";
+	_player;
 }
 
 Player::Player(string player)
@@ -15,7 +15,7 @@ Player::~Player()
 {
 }
 
-std::string Player::GetPlayer()
+string Player::GetPlayer()
 {
 	return _player;
 }
