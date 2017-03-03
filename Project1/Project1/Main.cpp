@@ -23,7 +23,7 @@ int main()
 	Role Top = Role("Top");
 	Role Jungle = Role("Jungle");
 	Role Mid = Role("Mid");
-	Role ADC = Role("ADC");
+	Role Adc = Role("Adc");
 	Role Support = Role("Support");
 
 	PHS.DraftPlayer(PropagandaWar, 0);
@@ -35,22 +35,23 @@ int main()
 	PHS.PlayerRole(Top, 0);
 	PHS.PlayerRole(Jungle, 1);
 	PHS.PlayerRole(Mid, 2);
-	PHS.PlayerRole(ADC, 3);
+	PHS.PlayerRole(Adc, 3);
 	PHS.PlayerRole(Support, 4);
 	cout << LoL.GetGame() << endl;
 	cout << endl;
 
 	cout << PHS.GetInfo() << endl;
 
-	cout << PropagandaWar.GetPlayer() << ": " << endl;
+
+	cout << PropagandaWar.GetPlayer() << ": " << Top.GetRole() << endl;
 	//cout << endl;
-	cout << Fuaximo.GetPlayer() << ": " << endl;
+	cout << Fuaximo.GetPlayer() << ": " << Jungle.GetRole() << endl;
 	//cout << endl;
-	cout << Scarred.GetPlayer() << ": " << endl;
+	cout << Scarred.GetPlayer() << ": " << Mid.GetRole() << endl;
 	//cout << endl;
-	cout << BreathofDestiny.GetPlayer() << ": " << endl;
+	cout << BreathofDestiny.GetPlayer() << ": " << Adc.GetRole() << endl;
 	//cout << endl;
-	cout << DustinTM.GetPlayer() << ": " << endl;
+	cout << DustinTM.GetPlayer() << ": " << Support.GetRole() << endl;
 	//cout << endl;
 
 	getchar();
